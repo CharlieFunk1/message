@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Message Board</title>
+    <style>
+      header  {
+        
+        width:1000px;
+        height:120px;
+        }
+      h1 {
+        border: 3px solid black;
+        background-color:#FD0BF5;
+        width:995px;
+        text-align: center;
+      }
+      button  {
+        font-size:30px;
+        background-color:#0BF5FD;
+        float: right;
+        margin-right:10px;
+      }
+      .myDiv {
+        background-color:#444444;
+        height:1100px;
+        width:1000px;
+      }
+      .div2 {
+        background-color:#A1A9AA;
+        height:900px;
+        width:950px;
+        margin-left:25px;
+      }
+      h2  {
+        color:#3AFD3D;
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="myDiv">
+      <header>
+        <h1>Super Duper Message Board</h1>
+        <form action="/login" class="inline">
+          <button class="login button">Login</button>
+        </form>
+        <form action="/signup" class="inline">
+          <button class="signup button">Create Account</button>
+        </form>
+      </header>
+      <div class="div2">
+        <h2>Topics</h2>
+      </div>
+    </div>
+  </body>
+</html>
