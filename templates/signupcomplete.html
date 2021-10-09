@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Message Board</title>
+    <title>signup</title>
     <style>
       header  {
+        
         width:1000px;
         height:120px;
         }
@@ -35,6 +36,9 @@
         color:#3AFD3D;
         text-align:center;
       }
+      .inline  {
+        float:center;
+      }
     </style>
   </head>
   <body>
@@ -49,7 +53,11 @@
         </form>
       </header>
       <div class="div2">
-        <h2>Topics</h2>
+        <h2>Create Account</h2>
+        <p>Thanks {{uname}}.  Your all signed up.  Please log in to continue.</p>
+        <form action="/login" class="inline">
+          <button class="login">Log In</button>
+        </form>
       </div>
     </div>
   </body>

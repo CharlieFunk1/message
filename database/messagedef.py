@@ -5,7 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref, sessionmaker
 
 
-engine = create_engine('sqlite:////home/charliefunk/flask-projects/message/database/message.db', echo=True)
+engine = create_engine('sqlite:////home/charliefunk/flask-projects/message/database/messagedef.db', echo=True)
 Base = declarative_base()
  
 ########################################################################

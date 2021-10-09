@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Message Board</title>
+    <title>signup</title>
     <style>
       header  {
         width:1000px;
@@ -49,7 +49,17 @@
         </form>
       </header>
       <div class="div2">
-        <h2>Topics</h2>
+        <h2>Create Account</h2>
+        <p>{{message}}</p>
+        <form action="/signupdata"method="POST">
+          <label for="newuname">User Name</label>
+          <input type="text" id="newuname" name="newuname"><br>
+          <label for"newpword">Password</label>
+          <input type"text" id="newpword" name="newpword"><br>
+          <label for="newemail">First Name</label>
+          <input type="text" id="newemail" name="newemail"><br>
+          <input type="submit" value="Submit">
+        </form>
       </div>
     </div>
   </body>
