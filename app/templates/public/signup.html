@@ -1,0 +1,75 @@
+{% extends "public/templates/public_template.html" %}
+
+{% block title %}Signup{% endblock %}
+
+{% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Create Account</h1>
+      <hr>
+
+        <div class="mb-3">
+        
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Select a username">
+          </div>
+        
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+          </div>
+        
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Create a password">
+          </div>
+
+          <button class="btn btn-primary" id="submit" onclick="submit_signup();">Create Account</button>
+
+        </div>
+          {% if feedback %}
+          <p class="text-danger float-right">{{ feedback }}</p>
+          {% endif %}
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+<script>
+
+    function submit_signup() {
+
+        var username = document.getElementById("username");
+        var email = document.getElementById("email");
+        var password = document.getElementById("password");
+
+        var entry = {
+            username: username.value,
+            email: email.value,
+            password: password.value
+        };
+        fetch(`${window.origin}/signup/create-entry`, {
+            method: "POST",
+            credentials: "include",
+            body: JSON.stringify(entry),
+            cache: "no-cache",
+            headers: new Headers({
+              "content-type": "application/json"
+            })
+          })
+          .catch(function(error) {
+            console.log("Fetch error: " + error);
+        });
+
+    }
+
+</script>
+
+{% endblock %}

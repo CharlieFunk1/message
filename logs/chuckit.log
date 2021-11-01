@@ -1,0 +1,43 @@
+2021-10-18 12:15:28,854 INFO: Chuckit startup [in /home/charliefunk/flask-projects/message/app/__init__.py:51]
+2021-10-18 14:52:06,817 INFO: Chuckit startup [in /home/charliefunk/flask-projects/message/app/__init__.py:51]
+2021-10-18 14:52:18,664 INFO: Chuckit startup [in /home/charliefunk/flask-projects/message/app/__init__.py:51]
+2021-10-18 14:52:26,020 ERROR: Exception on /login [POST] [in /home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/charliefunk/flask-projects/message/app/views.py", line 28, in login
+    print(f'{i}::{dir(form.username)[i]}')
+TypeError: list indices must be integers or slices, not str
+2021-10-18 14:53:25,591 ERROR: Exception on /login [POST] [in /home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/charliefunk/flask-projects/message/app/views.py", line 28, in login
+    print(f'{i}::{getattr(form.username, i)}')
+TypeError: list indices must be integers or slices, not str
+2021-10-18 14:53:34,833 ERROR: Exception on /login [POST] [in /home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/charliefunk/.venv/message/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/charliefunk/flask-projects/message/app/views.py", line 28, in login
+    print(f'{i}::{getattr(form.username, i)}')
+TypeError: list indices must be integers or slices, not str
+2021-10-18 14:53:40,012 INFO: Chuckit startup [in /home/charliefunk/flask-projects/message/app/__init__.py:51]
